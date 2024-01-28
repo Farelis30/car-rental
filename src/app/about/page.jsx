@@ -18,7 +18,7 @@ export default function About() {
         <h1 className="font-bold text-xl">TANAMS RENT</h1>
       </div>
       <div className="p-4">
-        <p className="text-justify">
+        <p className="text-justify max-w-6xl">
           Jasa "Sewa Mobil Untuk Setiap Perjalanan Anda" Menekankan posisi
           TANAMS RENT sebagai jasa sewa mobil yang dapat memenuhi kebutuhan
           transportasi pelanggan untuk berbagai perjalanan, baik bisnis maupun

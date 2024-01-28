@@ -11,13 +11,14 @@ export default function Home() {
           height={240}
           className="rounded-full w-64 h-64 object-cover shadow-xl my-20 border-gray-200 border"
           alt="Logo Tanams"
+          priority
         />
 
         <h1 className="font-bold text-xl">Tanams</h1>
       </div>
       <Link
         href="/cars"
-        className="bg-orange-500 text-white my-3 p-2 rounded font-semibold text-xl"
+        className="bg-orange-600 text-white my-3 p-2 rounded font-semibold text-xl"
       >
         Lanjutkan
       </Link>

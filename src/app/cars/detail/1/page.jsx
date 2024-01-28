@@ -2,22 +2,34 @@
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
 import React, { useState } from "react";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+import Link from "next/link";
 
 const HyundaiStargazer = () => {
   const [showMore, setShowMore] = useState(false);
 
+  const sliderSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+  };
+
   return (
     <div>
       <Navbar />
-      <div className="w-full">
-        <Image
-          src={"/assets/mobil3.jpg"}
-          width={500}
-          height={400}
-          alt="Hyundai Stargazer"
-          className="w-full h-72 object-cover"
-        />
-      </div>
+      <Image
+        src={"/assets/HyundaiStargezer/mobil3.jpg"}
+        width={500}
+        height={400}
+        alt="Hyundai Stargazer"
+        className="w-full h-72 object-cover"
+        priority
+      />
+
       <div className="p-4">
         <div className="text-2xl font-semibold my-7">
           Hyundai Stargazer at type Style 2023 Abu-Abu Genap
@@ -71,15 +83,24 @@ const HyundaiStargazer = () => {
           </button>
         )}
         <div className="my-4 flex flex-col gap-4 text-xl">
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          <Link
+            href={"/form/hyundai-stargazer/perHari"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Hari
-          </button>
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          </Link>
+          <Link
+            href={"/form/hyundai-stargazer/perMinggu"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Minggu
-          </button>
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          </Link>
+          <Link
+            href={"/form/hyundai-stargazer/perBulan"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Bulan
-          </button>
+          </Link>
         </div>
       </div>
     </div>

@@ -10,12 +10,13 @@ const CarCards = ({ url, type, id }) => {
         width={300}
         height={500}
         alt={type}
+        priority
         className="w-full h-48 object-cover rounded"
       />
       <div className="my-3 font-semibold text-xl">{type}</div>
       <Link
         href={`cars/detail/${id}`}
-        className="bg-orange-500 w-full text-white p-3 text-xl font-semibold rounded text-center"
+        className="bg-orange-600 w-full text-white p-3 text-xl font-semibold rounded text-center"
       >
         Lihat Detail
       </Link>

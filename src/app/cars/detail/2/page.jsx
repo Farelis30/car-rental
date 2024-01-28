@@ -1,6 +1,7 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const MitsubishiExpander = () => {
@@ -15,6 +16,7 @@ const MitsubishiExpander = () => {
           height={400}
           alt="Hyundai Stargazer"
           className="w-full h-72 object-cover"
+          priority
         />
       </div>
       <div className="p-4">
@@ -66,15 +68,24 @@ const MitsubishiExpander = () => {
           </button>
         )}
         <div className="my-4 flex flex-col gap-4 text-xl">
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          <Link
+            href={"/form/mitsubishi-expander/perHari"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Hari
-          </button>
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          </Link>
+          <Link
+            href={"/form/mitsubishi-expander/perMinggu"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Minggu
-          </button>
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          </Link>
+          <Link
+            href={"/form/mitsubishi-expander/perBulan"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Bulan
-          </button>
+          </Link>
         </div>
       </div>
     </div>

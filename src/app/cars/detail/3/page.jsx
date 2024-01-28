@@ -1,6 +1,7 @@
 "use client";
 import Navbar from "@/components/Navbar";
 import Image from "next/image";
+import Link from "next/link";
 import React, { useState } from "react";
 
 const ToyotaAgyaG = () => {
@@ -14,11 +15,12 @@ const ToyotaAgyaG = () => {
           width={500}
           height={400}
           alt="Hyundai Stargazer"
-          className="w-full h-72 object-cover"
+          className="w-full md:w-1/2 md:mx-auto  rounded h-72 md:h-96 object-cover"
+          priority
         />
       </div>
-      <div className="p-4">
-        <div className="text-2xl font-semibold my-7">
+      <div className="p-5 md:p-10">
+        <div className="text-2xl font-semibold my-3">
           Toyota Agya G at 1,2 2018 Hitam Ganjil
         </div>
         <div
@@ -64,15 +66,24 @@ const ToyotaAgyaG = () => {
           </button>
         )}
         <div className="my-4 flex flex-col gap-4 text-xl">
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          <Link
+            href={"/form/toyota-agya-g/perHari"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Hari
-          </button>
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          </Link>
+          <Link
+            href={"/form/toyota-agya-g/perMinggu"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Minggu
-          </button>
-          <button className="w-full bg-orange-600 text-white p-4 rounded">
+          </Link>
+          <Link
+            href={"/form/mitsubishi-expander/perBulan"}
+            className="w-full bg-orange-600 text-white p-4 rounded text-center"
+          >
             Per Bulan
-          </button>
+          </Link>
         </div>
       </div>
     </div>
